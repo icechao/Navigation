@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Navigation</string>
+    <string name="action_settings">Settings</string>
+
+    <array name="strings">
+        <item>home</item>
+        <item>contact</item>
+        <item>finds</item>
+        <item>internet</item>
+    </array>
+
+    <array name="selected_images">
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
+    </array>
+    <array name="normal_images">
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
+    </array>
+</resources>
