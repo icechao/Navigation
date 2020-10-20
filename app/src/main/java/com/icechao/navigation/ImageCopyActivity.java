@@ -1,6 +1,7 @@
 package com.icechao.navigation;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -9,21 +10,27 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.Settings;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-public class ImageCopyActivity extends AppCompatActivity {
+import androidx.core.app.ActivityCompat;
+
+import com.didichuxing.doraemonkit.DoraemonKit;
+
+public class ImageCopyActivity extends Activity {
 
     private Bitmap bitmap;
     private LinearLayout linearLayout;
+    private LinearLayout linearLayout1;
+    private LinearLayout linearLayout2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image_copy);
-        linearLayout = findViewById(R.id.linear_layout);
 //        linearLayout.setDrawingCacheEnabled(true);
 //        linearLayout.measure(View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED),
 //                View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
@@ -32,15 +39,33 @@ public class ImageCopyActivity extends AppCompatActivity {
 //        bitmap = Bitmap.createBitmap(linearLayout.getDrawingCache());
 //        linearLayout.setDrawingCacheEnabled(false);
 //        linearLayout.setGravity(Gravity.CENTER);
-
+        linearLayout1 = findViewById(R.id.linear_layout_1);
+        linearLayout2 = findViewById(R.id.linear_layout_2);
 
 //        try {
 //            ViewUtil.saveView(this, linearLayout, Environment.getDownloadCacheDirectory() + "/1.jgp");
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
+        final LayoutInflater from = LayoutInflater.from(ImageCopyActivity.this);
+        new Thread() {
+            @Override
+            public void run() {
+                long l = System.currentTimeMillis();
 
+                for (int i = 0; i < 50000; i++) {
+                    View inflate = from.inflate(R.layout.layout_image_view_1, null, true);
+                }
+                Log.e("-1写法 : ", String.valueOf(System.currentTimeMillis() - l));
+                l = System.currentTimeMillis();
+                for (int i = 0; i < 50000; i++) {
+                    View inflate = from.inflate(R.layout.layout_image_view, null, true);
+                }
+                Log.e("0写法 : ", String.valueOf(System.currentTimeMillis() - l));
+            }
+        }.start();
 
+        DoraemonKit.show();
     }
 
     private void checkPermission() {
@@ -72,7 +97,7 @@ public class ImageCopyActivity extends AppCompatActivity {
 //                checkPermission();
 //            }
 //        }, 5000);
-        requestOverlayPermission();
+//        requestOverlayPermission();
     }
 
     // 动态请求悬浮窗权限

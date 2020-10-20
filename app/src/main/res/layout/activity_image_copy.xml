@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:id="@+id/scroll_view"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".ImageCopyActivity">
 
     <!--    <ScrollView-->
@@ -14,53 +15,120 @@
     <LinearLayout
         android:id="@+id/linear_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
         android:orientation="vertical">
 
-        <ImageView
+
+        <com.icechao.navigation.ShapeRender
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:background="@color/colorPrimaryDark" />
+
+        <com.icechao.navigation.TaijiView
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:background="@color/colorPrimaryDark"
+            android:visibility="gone" />
+
+
+        <com.icechao.navigation.SectorLoadingView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="50dp" />
+
+        <com.icechao.navigation.PolygonProgressView
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:padding="20dp" />
+
+
+        <com.icechao.navigation.RayView
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:layout_marginTop="50dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp" />
+
+        <LinearLayout
+            android:id="@+id/linear_layout_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/level_logo" />
+            android:orientation="horizontal" />
+
+        <LinearLayout
+            android:id="@+id/linear_layout_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+
+        <!--                <com.icechao.navigation.kotlin.SlideButton-->
+        <!--                    android:layout_width="300dp"-->
+        <!--                    android:layout_height="30dp"/>-->
+
+
+        <!--                <com.icechao.navigation.OctMarketChart-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="245dp"-->
+        <!--                    android:layout_marginLeft="20dp"-->
+        <!--                    android:layout_marginTop="50dp"-->
+        <!--                    android:layout_marginRight="20dp" />-->
+
+        <com.icechao.navigation.DemoTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="30dp"
+            android:gravity="center"
+            android:text="ABCDEFGabcdefg这里是文字的测试"
+            android:textSize="20dp" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/level_logo" />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/level_logo" />
+        <!--        <ImageView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:src="@drawable/level_logo" />-->
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/level_logo" />
+        <!--        <ImageView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:src="@drawable/level_logo" />-->
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/level_logo" />
+        <!--        <ImageView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:src="@drawable/level_logo" />-->
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/level_logo" />
+        <!--        <ImageView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:src="@drawable/level_logo" />-->
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/level_logo" />
+        <!--        <ImageView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:src="@drawable/level_logo" />-->
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/level_logo" />
+        <!--        <ImageView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:src="@drawable/level_logo" />-->
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/level_logo" />
+        <!--        <ImageView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:src="@drawable/level_logo" />-->
+
+        <!--        <ImageView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:src="@drawable/level_logo" />-->
     </LinearLayout>
     <!--    </ScrollView>-->
 

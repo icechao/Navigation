@@ -1,11 +1,12 @@
 package com.icechao.navigation;
 
+import android.app.Activity;
+import android.content.ComponentName;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
-import android.support.annotation.NonNull;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,9 +14,13 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener, TextToSpeech.OnInitListener {
+public class MainActivity extends Activity implements View.OnClickListener, TextToSpeech.OnInitListener {
 
     private PanelView panelView;
     private CircleProgress circleProgress;
@@ -38,6 +43,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //            }
 //        });
 
+        TextView textView = findViewById(R.id.text_view_html);
+        textView.setText(null);
 
         circleProgress = findViewById(R.id.circle_progress);
         horzizentalProgress = findViewById(R.id.progress_horizontal);
@@ -102,6 +109,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.text_view_0:
+
+                Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher);
+
+                ComponentName cName = new ComponentName("com.huochat.im", "com.huochat.im.activity.SplashActivity");
+                Intent intent = new Intent("shareToHuoChat");
+                intent.setComponent(cName);
+                intent.putExtra("shareData",
+                        "{\n" +
+                                "\"shareType\":\"1\",\n" +
+                                "\"shareTo\":\"1\",\n" +
+                                "\"title\":\"分享\",\n" +
+                                "\"summary\":\"分享内容\",\n" +
+                                "\"imageUrl\":\"http://baidu.com\",\n" +
+                                "\"url\":\"http://baidu.com\",\n" +
+                                "\"source\":\"其他app\",\n" +
+                                "\"sourceIcon\":\"http://baidu.com\"\n" +
+                                "}");
+                intent.setType("text/plain");
+                intent.putExtra("imageBitmap", bitmap);
+                startActivity(intent);
+
+
                 panelView.setCurrent(0.1f);
                 circleProgress.setProgress(10);
                 horzizentalProgress.setProgress(10);

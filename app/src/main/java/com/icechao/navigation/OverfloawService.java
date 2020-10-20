@@ -9,14 +9,15 @@ import android.content.res.Resources;
 import android.graphics.PixelFormat;
 import android.os.Build;
 import android.os.IBinder;
-import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
 import android.view.Display;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
+
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 
 public class OverfloawService extends Service implements View.OnTouchListener, View.OnLongClickListener, ValueAnimator.AnimatorUpdateListener {
 

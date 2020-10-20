@@ -10,4 +10,11 @@
         <attr name="navigationTextColor" format="color" />
         <attr name="navigationImageHeight" format="dimension" />
     </declare-styleable>
+
+    <declare-styleable name="DemoTextView">
+        <attr name="textText" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="DemoTextView2">
+        <attr name="textText1" format="reference" />
+    </declare-styleable>
 </resources>

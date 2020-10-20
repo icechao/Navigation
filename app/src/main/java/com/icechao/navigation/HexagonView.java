@@ -6,11 +6,9 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.CornerPathEffect;
-import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.PathMeasure;
-import android.graphics.RectF;
 import android.graphics.SweepGradient;
 import android.os.Build;
 import android.util.AttributeSet;
@@ -97,6 +95,14 @@ public class HexagonView extends View {
         if (mPath == null) {
             initHexagonPath();
         }
+        SweepGradient shader = new SweepGradient(getMeasuredWidth() / 2, getMeasuredHeight() / 2,
+                new int[]{Color.YELLOW, Color.TRANSPARENT, Color.YELLOW, Color.TRANSPARENT, Color.YELLOW},
+                new float[]{
+                        0f, 0.25f, 0.5f, 0.75f, 1f
+                });
+//        Matrix matrix = new Matrix();
+//        matrix.setRotate(360 * moveLength / mPathMeasure.getLength(), getMeasuredWidth()/2, getMeasuredHeight()/2);
+        paint.setShader(shader);
         canvas.drawPath(mPath, paint);
         initHexagonShadowPath(canvas);
     }
@@ -108,13 +114,12 @@ public class HexagonView extends View {
         float h = (float) (Math.sqrt(3) * l);
         float top = (getMeasuredHeight() - h) / 2;
         mPath.reset();
-        mPath.moveTo(l / 2, top);
+        mPath.moveTo(2 * l - strokeWidth, h / 2 + top);
+        mPath.lineTo((float) (l * 1.5), top);
+        mPath.lineTo(l / 2, top);
         mPath.lineTo(strokeWidth, h / 2 + top);
         mPath.lineTo(l / 2, h + top);
         mPath.lineTo((float) (l * 1.5), h + top);
-        mPath.lineTo(2 * l - strokeWidth, h / 2 + top);
-        mPath.lineTo((float) (l * 1.5), top);
-        mPath.lineTo(l / 2, top);
         mPath.close();
     }
 

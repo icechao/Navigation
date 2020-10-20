@@ -11,3 +11,11 @@
 /build
 /captures
 .externalNativeBuild
+.idea/
+app/src/androidTest/
+gradle.properties
+gradle/
+gradlew
+gradlew.bat
+
+
