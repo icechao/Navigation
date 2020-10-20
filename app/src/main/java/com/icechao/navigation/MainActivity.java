@@ -24,7 +24,7 @@ public class MainActivity extends Activity implements View.OnClickListener, Text
 
     private PanelView panelView;
     private CircleProgress circleProgress;
-    private HorizentalProgress horzizentalProgress;
+    private HorizontalProgress horzizentalProgress;
     private TextToSpeech textToSpeech;
 
     @Override

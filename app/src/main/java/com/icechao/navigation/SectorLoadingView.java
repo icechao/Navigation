@@ -11,7 +11,7 @@ import android.util.AttributeSet;
 import android.view.animation.LinearInterpolator;
 
 /*************************************************************************
- * Description   :
+ * Description   : 圆形填充渐变进度
  *
  * @PackageName  : com.icechao.navigation
  * @FileName     : SectorLoadingView.java
@@ -39,7 +39,7 @@ import android.view.animation.LinearInterpolator;
  * ```` ':.          ':::::::::'                  ::::..
  *                    '.:::::'                    ':'````..
  *************************************************************************/
-public class SectorLoadingView extends android.support.v7.widget.AppCompatTextView implements ValueAnimator.AnimatorUpdateListener {
+public class SectorLoadingView extends androidx.appcompat.widget.AppCompatTextView implements ValueAnimator.AnimatorUpdateListener {
 
     private int width;
     private int height;

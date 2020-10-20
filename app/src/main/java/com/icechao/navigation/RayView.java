@@ -11,10 +11,8 @@ import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.animation.LinearInterpolator;
 
-import androidx.appcompat.widget.AppCompatImageView;
-
 /*************************************************************************
- * Description   :
+ * Description   : 方形边上有个移动的线
  *
  * @PackageName  : com.icechao.navigation
  * @FileName     : RayView.java
@@ -42,7 +40,7 @@ import androidx.appcompat.widget.AppCompatImageView;
  * ```` ':.          ':::::::::'                  ::::..
  *                    '.:::::'                    ':'````..
  *************************************************************************/
-public class RayView extends AppCompatImageView implements ValueAnimator.AnimatorUpdateListener {
+public class RayView extends androidx.appcompat.widget.AppCompatImageView implements ValueAnimator.AnimatorUpdateListener {
 
     private float radius = 50;
 

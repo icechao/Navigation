@@ -2,8 +2,7 @@ package com.icechao.navigation;
 
 import android.content.Context;
 import android.util.AttributeSet;
-
-import androidx.appcompat.widget.AppCompatImageView;
+import android.widget.ImageView;
 
 /*************************************************************************
  * Description   :
@@ -34,7 +33,7 @@ import androidx.appcompat.widget.AppCompatImageView;
  * ```` ':.          ':::::::::'                  ::::..
  *                    '.:::::'                    ':'````..
  *************************************************************************/
-public class RotateTimeView extends AppCompatImageView {
+public class RotateTimeView extends ImageView {
 
     public RotateTimeView(Context context) {
         super(context);

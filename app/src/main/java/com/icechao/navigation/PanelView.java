@@ -15,7 +15,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
 /*************************************************************************
- * Description   :
+ * Description   : 仪表盘
  *
  * @PackageName  : com.icechao.navigation
  * @FileName     : PanelView.java

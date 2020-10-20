@@ -9,6 +9,9 @@ import android.graphics.RectF;
 import android.graphics.Region;
 import android.util.Log;
 
+/**
+ * 跟随手势绘制平行线
+ */
 public class ParallelLineShape {
 
 

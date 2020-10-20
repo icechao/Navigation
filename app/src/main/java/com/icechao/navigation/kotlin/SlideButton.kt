@@ -5,8 +5,8 @@ import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.RectF
-import android.support.v7.widget.AppCompatTextView
 import android.util.AttributeSet
+import androidx.appcompat.widget.AppCompatTextView
 
 /*************************************************************************
  * Description   :
@@ -39,14 +39,6 @@ import android.util.AttributeSet
  *************************************************************************/
 public class SlideButton : AppCompatTextView {
 
-
-    var viewPading = 1f;
-    var itemMargin = 2f;
-    var itemWidth = 0f;
-    var backGroundColor = Color.TRANSPARENT
-    var itemSelectedColor = Color.BLUE
-    var itemSelectedTextColor = Color.BLACK
-    var itemNormalTextColor = Color.GRAY
     private var radius = 0f
 
     var backGroundPaint = Paint(Paint.ANTI_ALIAS_FLAG)

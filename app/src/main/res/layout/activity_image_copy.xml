@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scroll_view"
     android:layout_width="match_parent"
@@ -7,29 +7,30 @@
     android:fillViewport="true"
     tools:context=".ImageCopyActivity">
 
-    <!--    <ScrollView-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:fillViewport="true">-->
-
     <LinearLayout
         android:id="@+id/linear_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
         android:layout_marginTop="10dp"
         android:orientation="vertical">
+
+        <com.icechao.navigation.HexagonView
+            android:layout_width="100dp"
+            android:layout_height="50dp" />
+
+        <com.icechao.navigation.PanelView
+            android:layout_width="match_parent"
+            android:layout_height="500dp" />
 
 
         <com.icechao.navigation.ShapeRender
             android:layout_width="400dp"
-            android:layout_height="400dp"
-            android:background="@color/colorPrimaryDark" />
+            android:layout_height="400dp" />
 
         <com.icechao.navigation.TaijiView
-            android:layout_width="400dp"
-            android:layout_height="400dp"
-            android:background="@color/colorPrimaryDark"
-            android:visibility="gone" />
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
 
 
         <com.icechao.navigation.SectorLoadingView
@@ -38,8 +39,9 @@
             android:layout_margin="50dp" />
 
         <com.icechao.navigation.PolygonProgressView
-            android:layout_width="400dp"
-            android:layout_height="400dp"
+            android:layout_width="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="40dp"
             android:padding="20dp" />
 
 
@@ -52,30 +54,18 @@
             android:paddingRight="10dp"
             android:paddingBottom="10dp" />
 
-        <LinearLayout
-            android:id="@+id/linear_layout_1"
+
+        <com.icechao.navigation.kotlin.SlideButton
+            android:layout_width="300dp"
+            android:layout_height="300dp" />
+
+
+        <com.icechao.navigation.OctMarketChart
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" />
-
-        <LinearLayout
-            android:id="@+id/linear_layout_2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" />
-
-
-        <!--                <com.icechao.navigation.kotlin.SlideButton-->
-        <!--                    android:layout_width="300dp"-->
-        <!--                    android:layout_height="30dp"/>-->
-
-
-        <!--                <com.icechao.navigation.OctMarketChart-->
-        <!--                    android:layout_width="match_parent"-->
-        <!--                    android:layout_height="245dp"-->
-        <!--                    android:layout_marginLeft="20dp"-->
-        <!--                    android:layout_marginTop="50dp"-->
-        <!--                    android:layout_marginRight="20dp" />-->
+            android:layout_height="245dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="20dp" />
 
         <com.icechao.navigation.DemoTextView
             android:layout_width="match_parent"
@@ -85,51 +75,6 @@
             android:text="ABCDEFGabcdefg这里是文字的测试"
             android:textSize="20dp" />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/level_logo" />
-
-        <!--        <ImageView-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:src="@drawable/level_logo" />-->
-
-        <!--        <ImageView-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:src="@drawable/level_logo" />-->
-
-        <!--        <ImageView-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:src="@drawable/level_logo" />-->
-
-        <!--        <ImageView-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:src="@drawable/level_logo" />-->
-
-        <!--        <ImageView-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:src="@drawable/level_logo" />-->
-
-        <!--        <ImageView-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:src="@drawable/level_logo" />-->
-
-        <!--        <ImageView-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:src="@drawable/level_logo" />-->
-
-        <!--        <ImageView-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:src="@drawable/level_logo" />-->
     </LinearLayout>
-    <!--    </ScrollView>-->
 
-</android.support.v4.widget.NestedScrollView>
+</androidx.core.widget.NestedScrollView>

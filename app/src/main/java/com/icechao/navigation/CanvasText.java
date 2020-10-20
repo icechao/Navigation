@@ -6,8 +6,8 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.util.AttributeSet;
+import android.widget.TextView;
 
-import androidx.appcompat.widget.AppCompatTextView;
 
 /*************************************************************************
  * Description   :
@@ -38,7 +38,7 @@ import androidx.appcompat.widget.AppCompatTextView;
  * ```` ':.          ':::::::::'                  ::::..
  *                    '.:::::'                    ':'````..
  *************************************************************************/
-public class CanvasText extends AppCompatTextView {
+public class CanvasText extends TextView {
 
     private int width;
     private int height;

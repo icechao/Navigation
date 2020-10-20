@@ -2,22 +2,19 @@ package com.icechao.navigation;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.Rect;
 import android.os.Handler;
 import android.util.AttributeSet;
-import android.util.Log;
-import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 
-import androidx.appcompat.widget.AppCompatImageView;
 import androidx.core.view.GestureDetectorCompat;
 
 import static android.view.GestureDetector.*;
 
-public class ShapeRender extends AppCompatImageView implements OnGestureListener, View.OnTouchListener {
+/**
+ * 绘图容器
+ */
+public class ShapeRender extends androidx.appcompat.widget.AppCompatImageView implements OnGestureListener, View.OnTouchListener {
 
 
     ParallelLineShape shape = new ParallelLineShape();

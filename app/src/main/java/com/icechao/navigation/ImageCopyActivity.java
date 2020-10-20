@@ -16,8 +16,6 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import androidx.core.app.ActivityCompat;
-
 import com.didichuxing.doraemonkit.DoraemonKit;
 
 public class ImageCopyActivity extends Activity {
@@ -39,53 +37,36 @@ public class ImageCopyActivity extends Activity {
 //        bitmap = Bitmap.createBitmap(linearLayout.getDrawingCache());
 //        linearLayout.setDrawingCacheEnabled(false);
 //        linearLayout.setGravity(Gravity.CENTER);
-        linearLayout1 = findViewById(R.id.linear_layout_1);
-        linearLayout2 = findViewById(R.id.linear_layout_2);
+//        linearLayout1 = findViewById(R.id.linear_layout_1);
+//        linearLayout2 = findViewById(R.id.linear_layout_2);
 
 //        try {
 //            ViewUtil.saveView(this, linearLayout, Environment.getDownloadCacheDirectory() + "/1.jgp");
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
-        final LayoutInflater from = LayoutInflater.from(ImageCopyActivity.this);
-        new Thread() {
-            @Override
-            public void run() {
-                long l = System.currentTimeMillis();
-
-                for (int i = 0; i < 50000; i++) {
-                    View inflate = from.inflate(R.layout.layout_image_view_1, null, true);
-                }
-                Log.e("-1写法 : ", String.valueOf(System.currentTimeMillis() - l));
-                l = System.currentTimeMillis();
-                for (int i = 0; i < 50000; i++) {
-                    View inflate = from.inflate(R.layout.layout_image_view, null, true);
-                }
-                Log.e("0写法 : ", String.valueOf(System.currentTimeMillis() - l));
-            }
-        }.start();
-
-        DoraemonKit.show();
+//
+//        DoraemonKit.show();
     }
 
     private void checkPermission() {
         //检查权限（NEED_PERMISSION）是否被授权 PackageManager.PERMISSION_GRANTED表示同意授权
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED) {
-            //用户已经拒绝过一次，再次弹出权限申请对话框需要给用户一个解释
-            if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission
-                    .WRITE_EXTERNAL_STORAGE)) {
-                Toast.makeText(this, "请开通相关权限，否则无法正常使用本应用！", Toast.LENGTH_SHORT).show();
-            }
-            //申请权限
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
-
-        } else {
-
-            Bitmap bitmap = ViewUtil.compressImage(ViewUtil.getViewBitmap(linearLayout), Bitmap.CompressFormat.JPEG, 1000);//截取View的屏幕大小并压缩图片
-            ViewUtil.saveImage(this, Environment.getExternalStorageDirectory() + "/1.jpg", bitmap, Bitmap.CompressFormat.JPEG);//把获取到的Bitmap对象压缩图片保存到本地中sdcard
-//            imageView.setImageBitmap(bitmap);//在把获取到的Bitmap对象在imageView中显示出来
-        }
+//        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+//                != PackageManager.PERMISSION_GRANTED) {
+//            //用户已经拒绝过一次，再次弹出权限申请对话框需要给用户一个解释
+//            if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission
+//                    .WRITE_EXTERNAL_STORAGE)) {
+//                Toast.makeText(this, "请开通相关权限，否则无法正常使用本应用！", Toast.LENGTH_SHORT).show();
+//            }
+//            //申请权限
+//            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+//
+//        } else {
+//
+//            Bitmap bitmap = ViewUtil.compressImage(ViewUtil.getViewBitmap(linearLayout), Bitmap.CompressFormat.JPEG, 1000);//截取View的屏幕大小并压缩图片
+//            ViewUtil.saveImage(this, Environment.getExternalStorageDirectory() + "/1.jpg", bitmap, Bitmap.CompressFormat.JPEG);//把获取到的Bitmap对象压缩图片保存到本地中sdcard
+////            imageView.setImageBitmap(bitmap);//在把获取到的Bitmap对象在imageView中显示出来
+//        }
     }
 
     @Override

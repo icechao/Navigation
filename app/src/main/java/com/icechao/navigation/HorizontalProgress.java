@@ -41,7 +41,7 @@ import androidx.annotation.RequiresApi;
  * ```` ':.          ':::::::::'                  ::::..
  *                    '.:::::'                    ':'````..
  *************************************************************************/
-public class HorizentalProgress extends View {
+public class HorizontalProgress extends View {
 
     private Paint leftPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private Paint rightPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -87,23 +87,23 @@ public class HorizentalProgress extends View {
         this.pointRadiu = pointRadiu;
     }
 
-    public HorizentalProgress(Context context) {
+    public HorizontalProgress(Context context) {
         super(context);
         initView(context);
     }
 
-    public HorizentalProgress(Context context, @Nullable AttributeSet attrs) {
+    public HorizontalProgress(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         initView(context);
     }
 
-    public HorizentalProgress(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public HorizontalProgress(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initView(context);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public HorizentalProgress(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public HorizontalProgress(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         initView(context);
     }

@@ -84,7 +84,7 @@
         android:layout_width="match_parent"
         android:layout_height="300dp" />
 
-    <com.icechao.navigation.HorizentalProgress
+    <com.icechao.navigation.HorizontalProgress
         android:id="@+id/progress_horizontal"
         android:layout_width="match_parent"
         android:layout_height="50dp" />

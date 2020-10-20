@@ -17,7 +17,7 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 
 /*************************************************************************
- * Description   :
+ * Description   : 多边形进度
  *
  * @PackageName  : com.icechao.navigation
  * @FileName     : PolygonProgressView.java
@@ -45,7 +45,7 @@ import androidx.annotation.Nullable;
  * ```` ':.          ':::::::::'                  ::::..
  *                    '.:::::'                    ':'````..
  *************************************************************************/
-public class PolygonProgressView extends androidx.appcompat.widget.AppCompatTextView implements ValueAnimator.AnimatorUpdateListener {
+public class PolygonProgressView extends TextView implements ValueAnimator.AnimatorUpdateListener {
 
     private Paint borderPolygonPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private Paint movePointPaint = new Paint(Paint.ANTI_ALIAS_FLAG);

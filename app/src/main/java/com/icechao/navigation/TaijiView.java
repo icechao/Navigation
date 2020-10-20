@@ -7,11 +7,11 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
 import android.util.AttributeSet;
+import android.widget.TextView;
 
-import androidx.appcompat.widget.AppCompatTextView;
 
 /*************************************************************************
- * Description   :
+ * Description   : 太极图
  *
  * @PackageName  : com.icechao.navigation
  * @FileName     : TaijiView.java
@@ -39,7 +39,7 @@ import androidx.appcompat.widget.AppCompatTextView;
  * ```` ':.          ':::::::::'                  ::::..
  *                    '.:::::'                    ':'````..
  *************************************************************************/
-public class TaijiView extends AppCompatTextView {
+public class TaijiView extends androidx.appcompat.widget.AppCompatTextView {
 
     private float jiPointRadius = 20;
 
